@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Adição</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="corpo">
+        <div class="text">
+            <h1>Calculadora de Soma</h1>
+        </div>
+        <div class="num">
+            <div>
+                <input type="number" id="n1">
+            </div>
+            <div class="text">
+                <h1>+</h1>
+            </div>
+            <div>
+                <input type="number" id="n2">
+            </div>
+        </div>
+        <div class="btn-calcular">
+            <button id="b1" onclick="somar()">CALCULAR</button>
+        </div>
+        <div class="text">
+            <h1>RESULTADO:</h1>
+        </div>
+        <div>
+           <span></span>
+        </div>
+    </div>
+    <script>
+        var n1 = document.querySelector('#n1')
+        var n2 = document.querySelector('#n2')
+        var resultado = document.querySelector('span')
+
+        function somar(){
+            resultado.innerHTML = parseInt(n1.value) + parseInt(n2.value)
+        }
+    </script>
+    
+</body>
+</html>
